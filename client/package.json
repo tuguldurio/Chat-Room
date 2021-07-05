@@ -1,0 +1,33 @@
+{
+  "name": "chat-room",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "cross-env TAILWIND_MODE=watch vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "python deploy.py"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^1.0.1",
+    "@tailwindcss/postcss7-compat": "^2.2.4",
+    "autoprefixer": "^9.8.6",
+    "core-js": "^3.15.2",
+    "moment": "^2.29.1",
+    "postcss": "^7.0.36",
+    "socket.io-client": "^4.1.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.2",
+    "vue": "^3.1.4",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.1.4",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.12.1"
+  }
+}
