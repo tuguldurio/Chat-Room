@@ -2,8 +2,8 @@
   <div class="flex-1 flex flex-col shadow z-0">
     <Header/>
 
-    <div class="flex-1 overflow-y-auto">
-      <div ref="messagesEl" v-for="(msgGroup, index) in groupedMessages" :key="index">
+    <div ref="messagesEl" class="flex-1 overflow-y-auto">
+      <div v-for="(msgGroup, index) in groupedMessages" :key="index">
         
         <!-- Admin messages -->
         <div v-if="msgGroup.username=='admin'" class="p-8">
@@ -66,7 +66,7 @@ const groupedMessages = computed(() => {
 })
 
 // scroll to new message
-const messagesEl = ref(null)
+const messagesEl = ref()
 watch(store.state.messages, () => {
   nextTick(() => {
     messagesEl.value.lastElementChild.scrollIntoView({ block: 'end' })

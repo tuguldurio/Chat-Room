@@ -27,7 +27,3 @@ function changeRoom(event) {
   emit('changeRoom', room)
 }
 </script>
-
-<style>
-
-</style>

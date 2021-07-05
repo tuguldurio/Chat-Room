@@ -1,5 +1,5 @@
 {
-  "name": "chat-room",
+  "name": "chat-room-client",
   "version": "1.0.0",
   "scripts": {
     "serve": "cross-env TAILWIND_MODE=watch vue-cli-service serve",
@@ -7,6 +7,7 @@
     "lint": "vue-cli-service lint",
     "deploy": "python deploy.py"
   },
+  "license": "GNU GPLv3",
   "dependencies": {
     "@heroicons/vue": "^1.0.1",
     "@tailwindcss/postcss7-compat": "^2.2.4",
