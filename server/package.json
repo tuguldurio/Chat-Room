@@ -9,7 +9,7 @@
     "fetch": "python ./images/fetch.py"
   },
   "author": "",
-  "license": "GNU GPLv3",
+  "license": "GPL-3.0+",
   "dependencies": {
     "axios": "^0.21.1",
     "cors": "^2.8.5",
