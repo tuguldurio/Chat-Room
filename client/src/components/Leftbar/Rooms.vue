@@ -23,7 +23,7 @@ const room = computed(() => store.state.room)
 const emit = defineEmits(['changeRoom'])
 
 function changeRoom(event) {
-  const room = event.target.text.slice(2)
+  const room = event.target.innerText.slice(2)
   emit('changeRoom', room)
 }
 </script>
