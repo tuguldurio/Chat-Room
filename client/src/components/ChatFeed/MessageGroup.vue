@@ -42,6 +42,5 @@ const ago = ref(props.group.messages[0].time.fromNow())
 const interval = setInterval(() => {
   ago.value = props.group.messages[0].time.fromNow()
 }, 1000)
-
 onUnmounted(() => clearInterval(interval))
 </script>
