@@ -23,7 +23,8 @@ const store = useStore()
 
 const userJoined = computed(() => store.state.joined)
 
-const socket = io('https://tuguldurio-chat-room-node.herokuapp.com/')
+const url = process.env.NODE_ENV === 'development' ? 'localhost:8000' : 'https://tuguldurio-chat-room-node.herokuapp.com/'
+const socket = io(url)
 
 socket.on('message', (message) => {
   store.dispatch('addMessage', message)

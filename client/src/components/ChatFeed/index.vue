@@ -6,7 +6,7 @@
       <div v-for="(msgGroup, index) in groupedMessages" :key="index">
         
         <!-- Admin messages -->
-        <div v-if="msgGroup.username=='admin'" class="p-8">
+        <div v-if="msgGroup.username=='admin'" class="flex flex-col space-y-4 p-8">
           <div v-for="(message, index) in msgGroup.messages" :key="index">
             {{ message.text }}
           </div>

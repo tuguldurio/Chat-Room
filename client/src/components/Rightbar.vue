@@ -7,7 +7,10 @@
         <div v-for="(user, index) in users" :key="index"
           class="flex items-center space-x-2"
         >
-          <img class="w-10 h-10 mx-auto lg:mx-0 rounded-full flex-shrink-0" :src="user.image" alt="">
+          <img :src="user.image" alt=""
+            class="w-10 h-10 mx-auto lg:mx-0 rounded-full flex-shrink-0"
+            :class="{'border-2 border-indigo-500': username == user.username}"
+          >
           <p class="hidden lg:block">{{ user.username }}</p>
         </div>
       </div>

@@ -3,18 +3,19 @@
     <p class="text-gray-500 uppercase">Rooms</p>
     
     <div class="flex flex-col divide-y my-2 text-xl">
-      <div @click="changeRoom" class="py-2 cursor-pointer"># Node.js</div>
-      <div @click="changeRoom" class="py-2 cursor-pointer"># Python</div>
-      <div @click="changeRoom" class="py-2 cursor-pointer"># MongoDB</div>
-      <div @click="changeRoom" class="py-2 cursor-pointer"># MySQL</div>
-      <div @click="changeRoom" class="py-2 cursor-pointer"># Socket.IO</div>
+      <div v-for="(room, index) in rooms" :key="index" @click="changeRoom(index)"
+        class="py-2 cursor-pointer px-2 transition-colors"
+        :class="{'bg-indigo-500 text-white': rooms[activeIndex] == room}"
+      >
+        # {{ room }}
+      </div>
     </div>
 
   </div>
 </template>
 
 <script setup>
-import { computed, defineEmits } from 'vue'
+import { ref, computed, defineEmits } from 'vue'
 import { useStore } from 'vuex'
 
 const store = useStore()
@@ -22,8 +23,18 @@ const room = computed(() => store.state.room)
 
 const emit = defineEmits(['changeRoom'])
 
-function changeRoom(event) {
-  const room = event.target.innerText.slice(2)
-  emit('changeRoom', room)
+const rooms =  [
+  'Node.js',
+  'Python',
+  'MongoDB',
+  'MySQL',
+  'Socket.IO'
+]
+
+const activeIndex = ref(0)
+
+function changeRoom(index) {
+  activeIndex.value = index
+  emit('changeRoom', rooms[index])
 }
 </script>
