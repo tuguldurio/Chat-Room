@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col p-3 rounded-lg" 
+  <div class="flex flex-col space-y-2 p-3 rounded-lg" 
     :class="[myMessage ? 'col-start-6 col-end-13' : 'col-start-1 col-end-8']"
   >
     <div class="text-center text-xs">{{ ago }}</div>
@@ -11,11 +11,10 @@
     <div class="flex items-end"
       :class="[myMessage ? 'justify-start flex-row-reverse' : 'flex-row']"
     >
-
-      <img class="w-10 h-10 rounded-full flex-shrink-0" :src="group.image" alt="">
+      <img class="w-10 h-10 rounded-full flex-shrink-0" :src="group.image">
       
       <div class="max-w-[65%] md:max-w-lg lg:max-w-md xl:max-w-sm 2xl:max-w-xl flex flex-col space-y-2">
-        <Bubble v-for="(message, index) in group.messages" :key="index" 
+        <Bubble v-for="(message, index) in group.messages" :key="index"
           :myMessage="myMessage"
           :text="message.text"
         />

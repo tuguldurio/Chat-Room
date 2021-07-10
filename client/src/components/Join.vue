@@ -3,11 +3,11 @@
     <form @submit.prevent="submit"
       class="max-w-md w-full relative center"
     >
-      <div v-if="loading" class="absolute w-full h-full z-10 bg-white bg-opacity-90N flex items-center justify-center">
-        <div class="w-12 h-12 border-4 border-blue-600 rounded-full loader animate-spin"></div>
+      <div v-if="loading" class="absolute w-full h-full z-10 bg-white flex items-center justify-center">
+        <div class="w-12 h-12 border-4 border-indigo-600 rounded-full loader animate-spin"></div>
       </div>
 
-      <p class="absolute w-full text-indigo-900 font-el -top-20 text-5xl sm:text-6xl text-center">ChatRoom</p>
+      <p class="absolute w-full text-indigo-500 -top-20 text-5xl sm:text-6xl text-center">ChatRoom</p>
 
       <input ref="usernameEl" v-model="username" type="text" placeholder="Username"
         class="w-full appearance-none border rounded mb-2 py-2 px-3 text-grey-darker focus:outline-none"

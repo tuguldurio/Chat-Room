@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-grow flex-shrink flex flex-col px-8 py-2">
+  <div class="flex flex-col px-8 py-2">
     <p class="text-gray-500 uppercase">Rooms</p>
     
     <div class="flex flex-col divide-y my-2 text-xl">
@@ -23,7 +23,7 @@ const room = computed(() => store.state.room)
 
 const emit = defineEmits(['changeRoom'])
 
-const rooms =  [
+const rooms = [
   'Node.js',
   'Python',
   'MongoDB',

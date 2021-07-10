@@ -3,12 +3,10 @@
     <MenuIcon class="absolute w-6 h-6 left-6 sm:hidden"
       @click="open"
     />
-    <div class="">
-      <p class="text-2xl font-light">
-        {{ room }}
-        <span class="text-indigo-500">({{ count }})</span>
-      </p>
-    </div>
+    <p class="text-2xl font-light">
+      {{ room }}
+      <span class="text-indigo-500">({{ count }})</span>
+    </p>
   </div>
 </template>
 

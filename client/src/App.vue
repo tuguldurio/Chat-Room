@@ -17,7 +17,7 @@ import { io } from 'socket.io-client'
 import Leftbar from '@/components/Leftbar/index.vue'
 import Chat from '@/components/ChatFeed/index.vue'
 import Join from '@/components/Join.vue'
-import Rightbar from '@/components/Rightbar.vue'
+import Rightbar from '@/components/Rightbar/index.vue'
 
 const store = useStore()
 

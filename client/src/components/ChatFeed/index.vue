@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 flex flex-col shadow z-0">
+  <div class="h-full flex-1 flex flex-col shadow z-0">
     <Header/>
 
     <div ref="messagesEl" class="flex-1 overflow-y-auto">
