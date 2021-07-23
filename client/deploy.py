@@ -1,9 +1,6 @@
 import os
 import subprocess
 
-# build
-subprocess.run(['npm', 'run', 'build'], shell=True)
-
 # navigate into the build output directory
 os.chdir('dist')
 
